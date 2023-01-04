@@ -6,15 +6,11 @@
 
 :root {
     --white: #ffffff;
-    --blue: #0093fc;
+    --blue: #008ddf;
 }
 
-/* h1 {
-    float: right;
-} */
-
 .container {
-    /* height: 100vh; */
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
@@ -29,24 +25,34 @@
     grid-row: 1;
 }
 
+.this {
+    display: flex;
+    justify-self: center;
+}
+
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
 
     display: grid;
-    grid-template-rows: repeat(3, fit-content) 1fr;
-    gap: 60px;
+    grid-template-rows: repeat(3, min-content) 1fr;
+    gap: 50px;
 
-    padding-left: 2rem;
+    padding-left: 0.8rem;
     padding-top: 1rem;
 
     color: var(--white);
     background-color: var(--blue);
 }
 
-.logo, .navigation > div, .help > div {
+.logo > div, .navigation > div, .help > div {
     display: grid;
     grid-template-columns: 1fr 3fr;
+}
+
+.center-logo {
+    display: flex;
+    justify-self: center;
 }
 
 .help, .navigation {
