@@ -11,6 +11,7 @@
 
 .container {
     height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
@@ -25,9 +26,35 @@
     grid-row: 1;
 }
 
-.this {
-    display: flex;
-    justify-self: center;
+.search-section {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+
+    margin: 25px 50px;
+}
+
+#search {
+    /* align-self: center; */
+    border-radius: 12px;
+    border: none;
+
+    background-color: rgba(236, 236, 236, 0.835);
+
+    height: 22px;
+    width: 600px;
+}
+
+.search-section-1 {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 18px;
+}
+
+.search-section-2 {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 18px;
 }
 
 .sidebar {
@@ -51,7 +78,6 @@
 }
 
 .center-logo {
-    display: flex;
     justify-self: center;
 }
 
