@@ -185,15 +185,33 @@ input:focus {
     height: max-content;
 }
 
-.announcements > div, .trending > div {
+.announcements > div, .trending > div, .blogs-content > div {
     background-color: var(--white);
 
-    border-radius: 12px;
+    border-radius: 10px;
     
     width: 100%;
-    height: max-content;
+    /* height: max-content; */
 
     padding: 25px;
+}
+
+.blogs-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 45px;
+}
+
+.blogs-content h3 {
+    margin: 0;
+}
+
+.blogs-content > div {
+    border-left: 9px solid #f8a02e;
+
+    display: grid;
+    /* grid-template-rows: ; */
 }
 
 .trending-content {
@@ -203,10 +221,14 @@ input:focus {
     gap: 20px;
 }
 
-.announcements-content p, .trending-content p {
+.announcements-content p, .trending-content p, .blogs-content p {
     font-size: 12px;
 
     color: var(--dark-grey);
+}
+
+.trending-content p, .blogs-content p {
+    font-size: 16px;
 }
 
 .trending-content img {
@@ -229,4 +251,14 @@ input:focus {
 
 .trending-content h5 {
     align-self: center;
+}
+
+.project-icons {
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 16px;
+
+    justify-content: end;
 }
